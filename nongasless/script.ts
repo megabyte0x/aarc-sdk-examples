@@ -1,18 +1,17 @@
 import { ethers } from "ethers";
-import {AarcSDK} from "AarcSDK";
-import config from "../config.json";
+import {AarcSDK} from "AarcSDK/src";
+import { RPC_URL, PRIVATE_KEY, API_KEY } from "../constants";
 
-export const tokensTransfer = async (
-  recipientAddress: string
-) => {
-  let provider = new ethers.providers.JsonRpcProvider(config.rpcUrl);
-  let signer = new ethers.Wallet(config.privateKey, provider);
+export const tokensTransfer = async () => {
+  let provider = new ethers.providers.JsonRpcProvider(RPC_URL);
+  let signer = new ethers.Wallet(PRIVATE_KEY, provider);  
 
-  let aarcSDK = new AarcSDK({
+  let aarcSDK = new AarcSDK.default({
     signer: signer,
-    apiKey: config.apiKey,
+    apiKey: API_KEY,
   });
 
   let balances = await aarcSDK.fetchBalances();
   console.log(balances);
 }
+

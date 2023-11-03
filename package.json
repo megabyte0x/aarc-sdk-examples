@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ethers": "5.7"
+    "dotenv": "^16.3.1",
+    "ethers": "5.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
