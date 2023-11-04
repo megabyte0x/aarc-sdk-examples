@@ -11,7 +11,17 @@ export const tokensTransfer = async () => {
     apiKey: API_KEY,
   });
 
+  await aarcSDK.init();
+
   let balances = await aarcSDK.fetchBalances();
   console.log(balances);
+
+  let safes = await aarcSDK.getAllSafes();
+  console.log(safes);
+
+  await aarcSDK.executeMigration({
+    scwAddress:"0x786E6045eacb96cAe0259cd761e151b68B85bdA7",
+    tokenAndAmount:[{tokenAddress:"0xba62bcfcaafc6622853cca2be6ac7d845bc0f2dc",amount:"10000000000000"}]
+  })
 }
 
