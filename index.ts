@@ -1,10 +1,10 @@
-import { tokensTransfer } from "./nongasless/script";
+import { gaslessTokensTransfer } from "./gasless/script";
 
 import * as dotenv from 'dotenv';
 dotenv.config();
 
 async function main() {
- await tokensTransfer();
+ await gaslessTokensTransfer();
 }
 
 main();
