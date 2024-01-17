@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aarc-sdk": "^0.2.0-beta.5",
     "dotenv": "^16.3.1",
     "ethers": "^5.7.2",
     "ts-node": "^10.9.1",
