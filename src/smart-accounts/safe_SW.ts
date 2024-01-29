@@ -1,6 +1,6 @@
 import { ethers, BigNumber } from "ethers";
 import { Migrator, WALLET_TYPE } from "@aarc-xyz/migrator";
-import { SEPOLIA_RPC_URL, PRIVATE_KEY, API_KEY, ChainID } from "../constants";
+import { SEPOLIA_RPC_URL, PRIVATE_KEY, AARC_API_KEY, ChainID } from "../constants";
 
 
 let provider = new ethers.providers.JsonRpcProvider(SEPOLIA_RPC_URL);
@@ -10,7 +10,7 @@ let eoaAddress = signer.address;
 let aarcSDK = new Migrator({
     rpcUrl: SEPOLIA_RPC_URL,
     chainId: ChainID.SEPOLIA,
-    apiKey: API_KEY,
+    apiKey: AARC_API_KEY,
 });
 
 /**

@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npx tsc -w -p tsconfig.release.json",
     "biconomySW": "node build/src/smart-accounts/biconomy_SW.js",
-    "safeSW": "node build/src/smart-accounts/safe_SW.js"
+    "safeSW": "node build/src/smart-accounts/safe_SW.js",
+    "alchemySW": "node build/src/smart-accounts/alchemy_SW.js"
   },
   "author": "",
   "license": "ISC",

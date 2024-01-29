@@ -4,7 +4,7 @@ dotenv.config();
 export const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 export const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || "";
 export const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL || "";
-export const API_KEY = process.env.API_KEY || "";
+export const AARC_API_KEY = process.env.AARC_API_KEY || "";
 
 
 export enum ChainID {
