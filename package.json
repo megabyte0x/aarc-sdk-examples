@@ -9,7 +9,8 @@
     "biconomySW": "node build/src/smart-accounts/biconomy_SW.js",
     "safeSW": "node build/src/smart-accounts/safe_SW.js",
     "alchemySW": "node build/src/smart-accounts/alchemy_SW.js",
-    "zeroDevSW": "node build/src/smart-accounts/zeroDev_SW.js"
+    "zeroDevSW": "node build/src/smart-accounts/zeroDev_SW.js",
+    "etherspotSW": "node build/src/smart-accounts/etherspot_SW.js"
   },
   "author": "",
   "license": "ISC",
