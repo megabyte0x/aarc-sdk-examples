@@ -15,9 +15,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aarc-xyz/migrator": "^0.0.2",
+    "@aarc-xyz/wallets": "^0.0.1",
     "dotenv": "^16.3.1",
-    "ethers": "^5.7.2",
+    "ethers": "^6.9.2",
     "typescript": "^5.2.2"
   }
 }
