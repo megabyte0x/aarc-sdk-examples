@@ -50,5 +50,4 @@ export const tokenAddresses: TokenAddresses = {
 export const nativeTokenAddresses = {
     [ChainID.GOERLI]: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
     [ChainID.MUMBAI]: '0x0000000000000000000000000000000000001010'
-
 }
