@@ -13,15 +13,15 @@ let aarcSDK = new Wallets(
 );
 
 /**
- * Function to fetch the Biconomy Smart Wallets associated with the `eoaAddress`, and  deploy and transfer native tokens to the Biconomy Smart Wallet.
+ * Function to fetch the Alchemy Smart Wallets associated with the `eoaAddress`, and  deploy and transfer native tokens to the Alchemy Smart Wallet.
  */
 
-async function BiconomySW() {
+async function AlchemySW() {
 
     try {
         // get all the smart wallets associated with the eoaAddress
         const smartWalletAddresses = await aarcSDK.getSmartWalletAddresses(
-            WALLET_TYPE.BICONOMY,
+            WALLET_TYPE.ALCHEMY_SIMPLE_ACCOUNT,
             eoaAddress
         );
         console.log(' smartWalletAddresses ', smartWalletAddresses);
@@ -32,16 +32,16 @@ async function BiconomySW() {
 
     try {
         const response = await aarcSDK.deployWallet({
-            walletType: WALLET_TYPE.BICONOMY,
+            walletType: WALLET_TYPE.ALCHEMY_SIMPLE_ACCOUNT,
             owner: eoaAddress,
             signer: signer,
             deploymentWalletIndex: 0, // Change the index to the index of the SA
         });
-        console.log("Transfer and Deploy Response: ", response);
+        console.log("Deploy Response: ", response);
     } catch (error) {
         console.error(' error ', error);
     }
 }
 
-// to run this function: `npm run biconomySW`
-BiconomySW();
+// to run this function: `npm run alchemySW`
+AlchemySW();

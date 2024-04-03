@@ -13,15 +13,15 @@ let aarcSDK = new Wallets(
 );
 
 /**
- * Function to fetch the Biconomy Smart Wallets associated with the `eoaAddress`, and  deploy and transfer native tokens to the Biconomy Smart Wallet.
+ * Function to fetch the ZeroDev Smart Wallets associated with the `eoaAddress`, and  deploy and transfer native tokens to the ZeroDev Smart Wallet.
  */
 
-async function BiconomySW() {
+async function ZeroDevSW() {
 
     try {
         // get all the smart wallets associated with the eoaAddress
         const smartWalletAddresses = await aarcSDK.getSmartWalletAddresses(
-            WALLET_TYPE.BICONOMY,
+            WALLET_TYPE.ZERODEV_KERNEL,
             eoaAddress
         );
         console.log(' smartWalletAddresses ', smartWalletAddresses);
@@ -32,7 +32,7 @@ async function BiconomySW() {
 
     try {
         const response = await aarcSDK.deployWallet({
-            walletType: WALLET_TYPE.BICONOMY,
+            walletType: WALLET_TYPE.ZERODEV_KERNEL,
             owner: eoaAddress,
             signer: signer,
             deploymentWalletIndex: 0, // Change the index to the index of the SA
@@ -43,5 +43,5 @@ async function BiconomySW() {
     }
 }
 
-// to run this function: `npm run biconomySW`
-BiconomySW();
+// to run this function: `npm run zeroDevSW`
+ZeroDevSW();

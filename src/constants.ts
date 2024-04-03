@@ -2,14 +2,16 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 export const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
-export const RPC_URL = process.env.RPC_URL || "";
-export const API_KEY = process.env.API_KEY || "";
-export const GELATO_API_KEY = process.env.GELATO_API_KEY || "";
+export const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || "";
+export const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL || "";
+export const AARC_API_KEY = process.env.AARC_API_KEY || "";
+export const BASE_RPC_URL = process.env.BASE_RPC_URL || "";
 
 
 export enum ChainID {
     GOERLI = 5,
-    MUMBAI = 80001
+    MUMBAI = 80001,
+    SEPOLIA = 11155111
 }
 
 interface TokenInfo {
@@ -47,7 +49,6 @@ export const tokenAddresses: TokenAddresses = {
 };
 
 export const nativeTokenAddresses = {
-    [ChainID.GOERLI] : '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
-    [ChainID.MUMBAI]: '0x0000000000000000000000000000000000001010' 
-
+    [ChainID.GOERLI]: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
+    [ChainID.MUMBAI]: '0x0000000000000000000000000000000000001010'
 }

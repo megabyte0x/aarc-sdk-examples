@@ -6,14 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npx tsc -w -p tsconfig.release.json",
-    "biconomySW": "node build/src/smart-accounts/biconomy_SW.js"
+    "biconomySW": "node build/src/smart-accounts/biconomy_SW.js",
+    "safeSW": "node build/src/smart-accounts/safe_SW.js",
+    "alchemySW": "node build/src/smart-accounts/alchemy_SW.js",
+    "zeroDevSW": "node build/src/smart-accounts/zeroDev_SW.js",
+    "etherspotSW": "node build/src/smart-accounts/etherspot_SW.js",
+    "contractInteraction": "node build/src/fdk-api/contract-interaction.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@aarc-xyz/migrator": "^0.0.2",
+    "@aarc-xyz/wallets": "^0.0.1",
     "dotenv": "^16.3.1",
-    "ethers": "^5.7.2",
+    "ethers": "^6.9.2",
     "typescript": "^5.2.2"
   }
 }

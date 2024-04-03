@@ -11,17 +11,16 @@ let aarcSDK = new Wallets(
     ChainID.MUMBAI,
     MUMBAI_RPC_URL
 );
-
 /**
- * Function to fetch the Biconomy Smart Wallets associated with the `eoaAddress`, and  deploy and transfer native tokens to the Biconomy Smart Wallet.
+ * Function to fetch the Etherspot Smart Wallets associated with the `eoaAddress`, and  deploy and transfer native tokens to the Etherspot Smart Wallet.
  */
 
-async function BiconomySW() {
+async function EtherspotSW() {
 
     try {
         // get all the smart wallets associated with the eoaAddress
         const smartWalletAddresses = await aarcSDK.getSmartWalletAddresses(
-            WALLET_TYPE.BICONOMY,
+            WALLET_TYPE.ETHERSPOT,
             eoaAddress
         );
         console.log(' smartWalletAddresses ', smartWalletAddresses);
@@ -32,7 +31,7 @@ async function BiconomySW() {
 
     try {
         const response = await aarcSDK.deployWallet({
-            walletType: WALLET_TYPE.BICONOMY,
+            walletType: WALLET_TYPE.ETHERSPOT,
             owner: eoaAddress,
             signer: signer,
             deploymentWalletIndex: 0, // Change the index to the index of the SA
@@ -43,5 +42,5 @@ async function BiconomySW() {
     }
 }
 
-// to run this function: `npm run biconomySW`
-BiconomySW();
+// to run this function: `npm run etherspotSW`
+EtherspotSW();
