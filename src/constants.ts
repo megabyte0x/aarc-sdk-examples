@@ -5,6 +5,7 @@ export const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 export const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || "";
 export const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL || "";
 export const AARC_API_KEY = process.env.AARC_API_KEY || "";
+export const BASE_RPC_URL = process.env.BASE_RPC_URL || "";
 
 
 export enum ChainID {

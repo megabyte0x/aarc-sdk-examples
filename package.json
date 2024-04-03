@@ -10,7 +10,8 @@
     "safeSW": "node build/src/smart-accounts/safe_SW.js",
     "alchemySW": "node build/src/smart-accounts/alchemy_SW.js",
     "zeroDevSW": "node build/src/smart-accounts/zeroDev_SW.js",
-    "etherspotSW": "node build/src/smart-accounts/etherspot_SW.js"
+    "etherspotSW": "node build/src/smart-accounts/etherspot_SW.js",
+    "contractInteraction": "node build/src/fdk-api/contract-interaction.js"
   },
   "author": "",
   "license": "ISC",
